@@ -1,2 +1,17 @@
-apply plugin: 'jetty'
+// apply an plugin for creating dirs of project
 apply from: 'E:/Projects/IdeaProjects/gradle-templates/installation/apply-local.groovy'
+
+// apply plugins for devloping
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'jetty'
+
+// lib repository
+repositories {
+	mavenCentral()
+}
+
+// dependencies
+dependencies {
+
+}

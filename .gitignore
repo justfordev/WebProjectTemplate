@@ -10,3 +10,8 @@
 build
 bin
 lib
+
+# Eclipse Files #
+*.classpath
+*.project
+.settings
