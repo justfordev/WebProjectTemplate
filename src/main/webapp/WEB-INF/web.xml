@@ -10,6 +10,24 @@
 		Describe the WebProjectTemplate Webapp here.
 		justfordev.wu@gmail.com	`
 	</description>
+	
+	<!-- SpringMVC -->
+	<servlet>
+		<servlet-name>webProjectTemplate</servlet-name>
+		<servlet-class>org.springframework.web.servlet.dispatherServlet</servlet-class>
+<!--
+ 		<init-param>
+			<param-name>contextConfigLoader</param-name>
+			<param-value>/WEB-INF/dispather-servlet.xml</param-value>
+		</init-param> 
+ -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>webProjectTemplate</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>

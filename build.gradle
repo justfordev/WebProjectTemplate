@@ -10,5 +10,13 @@ repositories {
 
 // dependencies
 dependencies {
-
+	spring_version = "3.0.5.RELEASE"
+	spring = [
+		"org.springframework:spring-core:$spring_version",
+		"org.springframework:spring-beans:$spring_version",
+		"org.springframework:spring-context:$spring_version",
+		"org.springframework:spring-web:$spring_version",
+		"org.springframework:spring-webmvc:$spring_version"
+	]
+	compile spring
 }
