@@ -8,18 +8,26 @@
 	<display-name>WebProjectTemplate - Webapp</display-name>
 	<description>
 		Describe the WebProjectTemplate Webapp here.
-		justfordev.wu@gmail.com
+		justfordev.wu@gmail.com	`
 	</description>
-
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/applicationContext.xml</param-value>
-	</context-param>
-
-	<listener>
-		<listener-class>org.springframework.web.context.contextLocationListener</listener-class>
-	</listener>
-
+	
+	<!-- SpringMVC -->
+	<servlet>
+		<servlet-name>webProjectTemplate</servlet-name>
+		<servlet-class>org.springframework.web.servlet.dispatherServlet</servlet-class>
+<!--
+ 		<init-param>
+			<param-name>contextConfigLoader</param-name>
+			<param-value>/WEB-INF/dispather-servlet.xml</param-value>
+		</init-param> 
+ -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>webProjectTemplate</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
