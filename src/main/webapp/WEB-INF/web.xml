@@ -1,16 +1,26 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE web-app
     PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
     "http://java.sun.com/dtd/web-app_2_3.dtd">
 
 <web-app>
-   <!-- General description of your web application -->
-   <display-name>WebProjectTemplate - Webapp</display-name>
-      <description>
-         Describe the WebProjectTemplate Webapp here.
-         Administrator@example.com
+	<!-- General description of your web application -->
+	<display-name>WebProjectTemplate - Webapp</display-name>
+	<description>
+		Describe the WebProjectTemplate Webapp here.
+		justfordev.wu@gmail.com
+	</description>
 
-         See http://tomcat.apache.org/tomcat-6.0-doc/appdev/web.xml.txt for more information
-         regarding this Web Descriptor File.
-   </description>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.contextLocationListener</listener-class>
+	</listener>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 </web-app>
