@@ -18,5 +18,12 @@ dependencies {
 		"org.springframework:spring-web:$spring_version",
 		"org.springframework:spring-webmvc:$spring_version"
 	]
-	compile spring
+	
+	servlet = [
+		"javax.servlet:servlet-api:2.5"
+	]
+
+	myjar = fileTree(dir: "/lib", include: "*.jar")
+	
+	compile spring,servlet,myjar
 }
