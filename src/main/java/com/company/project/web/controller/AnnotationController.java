@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value="/annotation")
 public class AnnotationController {
+	@RequestMapping(value="/annotation")
 	public ModelAndView handleRequest() {
 		return new ModelAndView("test");
 	}
