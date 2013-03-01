@@ -11,4 +11,21 @@
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 	<!-- HandleAdaptr -->
 	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+	
+	<!-- deploy Mapping -->
+	<bean name="/homepage" class="com.company.project.web.controller.HelloWorldController" />
+	
+	<!-- JSP ViewResolver -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
 </beans>
