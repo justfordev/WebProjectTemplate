@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.Controller;
 public class HelloWorldController implements Controller {
 
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		Map model = new HashMap();
+		Map<String, String> model = new HashMap<String, String>();
 		model.put("message", "Hello World!");
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("welcome");
